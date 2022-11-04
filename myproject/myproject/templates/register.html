@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+
+
+{%block title%}
+    Registration Page
+{%endblock%}
+
+
+{%block body%}
+    <h3>Welcome to Registration Page</h3>
+
+    <form method="post">
+        {%Csrf_token%}
+        {{form.as_p}}
+        <br>
+        <input type="submit" value="REGISTER">
+        <br>
+        <br>
+        <h5>Already have an account?</h5>
+        <a href="login.html">LOGIN</a>
+    </form>
+{%endblock%}
